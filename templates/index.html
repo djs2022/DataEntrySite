@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="favorite icon" href="/static/favicon.jpeg">
+    <title>Djs2022 Info entry</title>
+</head>
+<body>
+        <h1 align="center">Djs2022 Info entry</h1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-dismissible alert-primary flashes-box">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        <div class="form-div">
+            <h2 class="form-head" align="center">Enter the following details</h2>
+            <p align="center" class="form-text">This information is being collected for public display on the <abbr title="Deeksha Jnana Sweekar 2020-22">DJS2022</abbr> website. <a href="https://djs2022.tk">https://djs2022.tk</a><br> This data shall be processed and reviewed by the students of Deeksha Jnana Sweekar PU college before publishing.</p>
+            <form data-bitwarden-watching="1" enctype="multipart/form-data" method="post" action="/upload">
+                <fieldset>
+                    <div class="form-group row">
+                        <div class="col-sm-15 form-inp-div">
+                            <label for="Name" class="input-label">Name:</label>
+                            <input name="name" type="text" placeholder=" Your Name" class="form-input" required><br>
+                            <small class="form-text">Enter your full name. This will be shown on the site.</small>
+                        </div>
+                        <div class="col-sm-15 form-inp-div">
+                            <label for="Email" class="input-label">Email:</label>
+                            <input name="email" type="email" placeholder="your@email.com" class="form-input" required><br>
+                            <small class="form-text">This will not be shared on the site. This info will be used for contacting you later if needed.</small>
+                        </div>
+                        <div class="col-sm-15 form-inp-div">
+                            <label for="Whatsapp Number" class="input-label">Whatsapp Number:</label>
+                            <input name="phone_number" type="tel" placeholder="Your Whatsapp Number" class="form-input" pattern="[0-9]{10}" required><br>
+                            <small class="form-text">FORMAT: 8753145400<br>This will not be shared on the site. This info will be used for contacting you later if needed.</small>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group row">
+                        <div class="col-sm-15 form-inp-div">
+                            <label for="Instagram" class="input-label">Instagram Handle:</label>
+                            <input name="instagram" type="text" placeholder="@your_insta_handle" class="form-input"><br>
+                            <small class="form-text">This will be shown on the site</small>
+                        </div>
+                        <div class="col-sm-15 form-inp-div">
+                            <label for="Tagline" class="input-label">Tagline:</label>
+                            <input name="tagline" type="text" placeholder="A one line description about yourself" class="form-input" required><br>
+                            <small class="form-text">This will be shown on the site</small>
+                        </div>
+                        <div class="col-sm-15 form-inp-div">
+                            <label for="Picture-Upload" class="input-label">Picture:</label>
+                            <input name="picture" type="file" class="custom-file-input" accept="image/png, image/jpeg, image/jpg, .png, .jpg, .jpeg" required><br>
+                            <small class="form-text">Upload an image of yourself. Accepted Formats: PNG, JPEG, JPG. Maximum Image size: 5MB<br>This will be shown on the site.</small>
+                        </div>
+                    </div>
+                </fieldset>
+                <div align="center">
+                    <input type="submit" value="Submit" class="btn btn-success">
+                    <input type="reset" value="Reset" class="btn btn-outline-danger">
+                </div>
+            </form>
+        </div>
+</body>
+</html>

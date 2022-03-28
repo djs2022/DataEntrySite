@@ -1,0 +1,62 @@
+.form-div {
+  background-color: honeydew;
+  margin: 5%;
+  align-items: center;
+  padding: 2%;
+}
+
+.input-label {
+  color: black;
+}
+
+.form-head {
+  color: black;
+  font-size: 2rem;
+}
+
+.form-inp-div {
+  margin: 1rem;
+}
+
+.form-text {
+  color: black;
+}
+
+.form-input {
+  width: 80%;
+}
+
+.form-div {
+  background-color: #f2f2f2;
+  margin: 5%;
+  align-items: center;
+}
+
+.input-label {
+  color: black;
+}
+
+.form-head {
+  color: black;
+  font-size: 2rem;
+}
+
+.form-inp-div {
+  margin: 1rem;
+}
+
+.form-text {
+  color: black;
+}
+
+.form-input {
+  width: 80%;
+}
+
+.custom-file-input {
+  color: black;
+}
+
+.flashes-box {
+  margin: 1rem;
+}
